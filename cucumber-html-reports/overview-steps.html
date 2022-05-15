@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>06 May 2022, 04:28</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">SD.F01Registration.Register()</td>
+              <td>1</td>
+              <td class="duration" data-value="8423000000">8.423</td>
+              <td class="duration" data-value="8423000000">8.423</td>
+              <td class="duration" data-value="8423000000">8.423</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F01Registration.homePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="39000000">0.039</td>
+              <td class="duration" data-value="39000000">0.039</td>
+              <td class="duration" data-value="39000000">0.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F01Registration.validData()</td>
+              <td>1</td>
+              <td class="duration" data-value="5350000000">5.350</td>
+              <td class="duration" data-value="5350000000">5.350</td>
+              <td class="duration" data-value="5350000000">5.350</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F02Login.InsertData()</td>
+              <td>1</td>
+              <td class="duration" data-value="3449000000">3.449</td>
+              <td class="duration" data-value="3449000000">3.449</td>
+              <td class="duration" data-value="3449000000">3.449</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F02Login.OpenBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="5270000000">5.270</td>
+              <td class="duration" data-value="5270000000">5.270</td>
+              <td class="duration" data-value="5270000000">5.270</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F02Login.loginSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="5026000000">5.026</td>
+              <td class="duration" data-value="5026000000">5.026</td>
+              <td class="duration" data-value="5026000000">5.026</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F03ChangePassword.Register()</td>
+              <td>1</td>
+              <td class="duration" data-value="6793000000">6.793</td>
+              <td class="duration" data-value="6793000000">6.793</td>
+              <td class="duration" data-value="6793000000">6.793</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F03ChangePassword.changePassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="12338000000">12.338</td>
+              <td class="duration" data-value="12338000000">12.338</td>
+              <td class="duration" data-value="12338000000">12.338</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F03ChangePassword.passwordChangedsuccesfuly()</td>
+              <td>1</td>
+              <td class="duration" data-value="39000000">0.039</td>
+              <td class="duration" data-value="39000000">0.039</td>
+              <td class="duration" data-value="39000000">0.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F04SearchForProducts.ProductFound()</td>
+              <td>1</td>
+              <td class="duration" data-value="19000000">0.019</td>
+              <td class="duration" data-value="19000000">0.019</td>
+              <td class="duration" data-value="19000000">0.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F04SearchForProducts.SearchForSuchProduct()</td>
+              <td>1</td>
+              <td class="duration" data-value="6012000000">6.012</td>
+              <td class="duration" data-value="6012000000">6.012</td>
+              <td class="duration" data-value="6012000000">6.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F04SearchForProducts.Searchforproduct()</td>
+              <td>1</td>
+              <td class="duration" data-value="6093000000">6.093</td>
+              <td class="duration" data-value="6093000000">6.093</td>
+              <td class="duration" data-value="6093000000">6.093</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F05SwitchBetweenCurrencies.InsertData()</td>
+              <td>1</td>
+              <td class="duration" data-value="3652000000">3.652</td>
+              <td class="duration" data-value="3652000000">3.652</td>
+              <td class="duration" data-value="3652000000">3.652</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F05SwitchBetweenCurrencies.OpenBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="5242000000">5.242</td>
+              <td class="duration" data-value="5242000000">5.242</td>
+              <td class="duration" data-value="5242000000">5.242</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F05SwitchBetweenCurrencies.SwitchToEuro()</td>
+              <td>1</td>
+              <td class="duration" data-value="3074000000">3.074</td>
+              <td class="duration" data-value="3074000000">3.074</td>
+              <td class="duration" data-value="3074000000">3.074</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F05SwitchBetweenCurrencies.SwitchToUSDollar()</td>
+              <td>1</td>
+              <td class="duration" data-value="3132000000">3.132</td>
+              <td class="duration" data-value="3132000000">3.132</td>
+              <td class="duration" data-value="3132000000">3.132</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F05SwitchBetweenCurrencies.SwitchesToEuro()</td>
+              <td>1</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F05SwitchBetweenCurrencies.SwitchesToUSDollar()</td>
+              <td>1</td>
+              <td class="duration" data-value="53000000">0.053</td>
+              <td class="duration" data-value="53000000">0.053</td>
+              <td class="duration" data-value="53000000">0.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F06SelectDifferentCategories.InsertData()</td>
+              <td>1</td>
+              <td class="duration" data-value="4660000000">4.660</td>
+              <td class="duration" data-value="4660000000">4.660</td>
+              <td class="duration" data-value="4660000000">4.660</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F06SelectDifferentCategories.OpenBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="6497000000">6.497</td>
+              <td class="duration" data-value="6497000000">6.497</td>
+              <td class="duration" data-value="6497000000">6.497</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F06SelectDifferentCategories.SwitchesToUSDollar()</td>
+              <td>1</td>
+              <td class="duration" data-value="5013000000">5.013</td>
+              <td class="duration" data-value="5013000000">5.013</td>
+              <td class="duration" data-value="5013000000">5.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F06SelectDifferentCategories.selectcategories()</td>
+              <td>1</td>
+              <td class="duration" data-value="11720000000">11.720</td>
+              <td class="duration" data-value="11720000000">11.720</td>
+              <td class="duration" data-value="11720000000">11.720</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F07FilterWithColor.InsertData()</td>
+              <td>1</td>
+              <td class="duration" data-value="2990000000">2.990</td>
+              <td class="duration" data-value="2990000000">2.990</td>
+              <td class="duration" data-value="2990000000">2.990</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F07FilterWithColor.OpenBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="9310000000">9.310</td>
+              <td class="duration" data-value="9310000000">9.310</td>
+              <td class="duration" data-value="9310000000">9.310</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F07FilterWithColor.SelectApparel()</td>
+              <td>1</td>
+              <td class="duration" data-value="11830000000">11.830</td>
+              <td class="duration" data-value="11830000000">11.830</td>
+              <td class="duration" data-value="11830000000">11.830</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F07FilterWithColor.SelectColor()</td>
+              <td>1</td>
+              <td class="duration" data-value="2061000000">2.061</td>
+              <td class="duration" data-value="2061000000">2.061</td>
+              <td class="duration" data-value="2061000000">2.061</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F07FilterWithColor.loginSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="12000000">0.012</td>
+              <td class="duration" data-value="12000000">0.012</td>
+              <td class="duration" data-value="12000000">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F08SelectDifferentTags.AnotherTagName()</td>
+              <td>1</td>
+              <td class="duration" data-value="2617000000">2.617</td>
+              <td class="duration" data-value="2617000000">2.617</td>
+              <td class="duration" data-value="2617000000">2.617</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F08SelectDifferentTags.Expected()</td>
+              <td>1</td>
+              <td class="duration" data-value="35000000">0.035</td>
+              <td class="duration" data-value="35000000">0.035</td>
+              <td class="duration" data-value="35000000">0.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F08SelectDifferentTags.Expected2()</td>
+              <td>1</td>
+              <td class="duration" data-value="21000000">0.021</td>
+              <td class="duration" data-value="21000000">0.021</td>
+              <td class="duration" data-value="21000000">0.021</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F08SelectDifferentTags.InsertData()</td>
+              <td>1</td>
+              <td class="duration" data-value="3856000000">3.856</td>
+              <td class="duration" data-value="3856000000">3.856</td>
+              <td class="duration" data-value="3856000000">3.856</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F08SelectDifferentTags.OpenBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="5468000000">5.468</td>
+              <td class="duration" data-value="5468000000">5.468</td>
+              <td class="duration" data-value="5468000000">5.468</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F08SelectDifferentTags.SelectCategoryAndTagName()</td>
+              <td>1</td>
+              <td class="duration" data-value="4182000000">4.182</td>
+              <td class="duration" data-value="4182000000">4.182</td>
+              <td class="duration" data-value="4182000000">4.182</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F09AddDifferentProductToShoppingCart.AddproductsToTheCart()</td>
+              <td>1</td>
+              <td class="duration" data-value="12332000000">12.332</td>
+              <td class="duration" data-value="12332000000">12.332</td>
+              <td class="duration" data-value="12332000000">12.332</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F09AddDifferentProductToShoppingCart.InsertData()</td>
+              <td>1</td>
+              <td class="duration" data-value="4514000000">4.514</td>
+              <td class="duration" data-value="4514000000">4.514</td>
+              <td class="duration" data-value="4514000000">4.514</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F09AddDifferentProductToShoppingCart.OpenBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="5650000000">5.650</td>
+              <td class="duration" data-value="5650000000">5.650</td>
+              <td class="duration" data-value="5650000000">5.650</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F09AddDifferentProductToShoppingCart.OpenElectronicsProducts()</td>
+              <td>1</td>
+              <td class="duration" data-value="5723000000">5.723</td>
+              <td class="duration" data-value="5723000000">5.723</td>
+              <td class="duration" data-value="5723000000">5.723</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F09AddDifferentProductToShoppingCart.ShoppingCartmsg()</td>
+              <td>1</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F10AddDifferentProductToWishlist.AddproductsToTheCart()</td>
+              <td>1</td>
+              <td class="duration" data-value="10587000000">10.587</td>
+              <td class="duration" data-value="10587000000">10.587</td>
+              <td class="duration" data-value="10587000000">10.587</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F10AddDifferentProductToWishlist.InsertData()</td>
+              <td>1</td>
+              <td class="duration" data-value="4102000000">4.102</td>
+              <td class="duration" data-value="4102000000">4.102</td>
+              <td class="duration" data-value="4102000000">4.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F10AddDifferentProductToWishlist.OpenBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="5152000000">5.152</td>
+              <td class="duration" data-value="5152000000">5.152</td>
+              <td class="duration" data-value="5152000000">5.152</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F10AddDifferentProductToWishlist.OpenElectronicsProducts()</td>
+              <td>1</td>
+              <td class="duration" data-value="7016000000">7.016</td>
+              <td class="duration" data-value="7016000000">7.016</td>
+              <td class="duration" data-value="7016000000">7.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F10AddDifferentProductToWishlist.WishListmsg()</td>
+              <td>1</td>
+              <td class="duration" data-value="32000000">0.032</td>
+              <td class="duration" data-value="32000000">0.032</td>
+              <td class="duration" data-value="32000000">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F11AddDifferentProductToCompareList.AddproductsToTheCart()</td>
+              <td>1</td>
+              <td class="duration" data-value="23111000000">23.111</td>
+              <td class="duration" data-value="23111000000">23.111</td>
+              <td class="duration" data-value="23111000000">23.111</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F11AddDifferentProductToCompareList.CompareListmsg()</td>
+              <td>1</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F11AddDifferentProductToCompareList.InsertData()</td>
+              <td>1</td>
+              <td class="duration" data-value="3666000000">3.666</td>
+              <td class="duration" data-value="3666000000">3.666</td>
+              <td class="duration" data-value="3666000000">3.666</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F11AddDifferentProductToCompareList.OpenBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="5444000000">5.444</td>
+              <td class="duration" data-value="5444000000">5.444</td>
+              <td class="duration" data-value="5444000000">5.444</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F11AddDifferentProductToCompareList.OpenElectronicsProducts()</td>
+              <td>1</td>
+              <td class="duration" data-value="5744000000">5.744</td>
+              <td class="duration" data-value="5744000000">5.744</td>
+              <td class="duration" data-value="5744000000">5.744</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F12CreateSuccessfulOrder.AddproductsToTheCart()</td>
+              <td>1</td>
+              <td class="duration" data-value="14037000000">14.037</td>
+              <td class="duration" data-value="14037000000">14.037</td>
+              <td class="duration" data-value="14037000000">14.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F12CreateSuccessfulOrder.Adduserdata()</td>
+              <td>1</td>
+              <td class="duration" data-value="25677000000">25.677</td>
+              <td class="duration" data-value="25677000000">25.677</td>
+              <td class="duration" data-value="25677000000">25.677</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F12CreateSuccessfulOrder.InsertData()</td>
+              <td>1</td>
+              <td class="duration" data-value="3550000000">3.550</td>
+              <td class="duration" data-value="3550000000">3.550</td>
+              <td class="duration" data-value="3550000000">3.550</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F12CreateSuccessfulOrder.OpenBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="5640000000">5.640</td>
+              <td class="duration" data-value="5640000000">5.640</td>
+              <td class="duration" data-value="5640000000">5.640</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F12CreateSuccessfulOrder.OpenElectronicsProducts()</td>
+              <td>1</td>
+              <td class="duration" data-value="5489000000">5.489</td>
+              <td class="duration" data-value="5489000000">5.489</td>
+              <td class="duration" data-value="5489000000">5.489</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SD.F12CreateSuccessfulOrder.ShoppingCartmsg()</td>
+              <td>1</td>
+              <td class="duration" data-value="78000000">0.078</td>
+              <td class="duration" data-value="78000000">0.078</td>
+              <td class="duration" data-value="78000000">0.078</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>54</td>
+            <td>54</td>
+            <td class="duration">5.405</td>
+            <td class="duration">25.677</td>
+            <td class="duration">4:51.893</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
